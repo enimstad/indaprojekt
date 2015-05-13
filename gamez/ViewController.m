@@ -40,7 +40,18 @@
 }
 
 - (void) createObject {
-    // Fruit *fo = [[Fruit alloc] initWithRandomSprite];
+    FallingObject *fo;
+    bool createFruit = arc4random()%2;
+    if (createFruit) {
+        fo = [[Fruit alloc] initWithRandomSprite];
+    }
+    else {
+        fo = [[Sweet alloc] initWithRandomSprite];
+    }
+    [self.view addSubview:fo];
+    [fo create];
+    NSLog(@"%d", createFruit);
+    // self.fallingObjects = [self.fallingObjects arrayByAddingObject:fo];
 }
 
 - (void)didReceiveMemoryWarning {

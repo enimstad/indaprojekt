@@ -9,17 +9,16 @@
 #ifndef gamez_FallingObject_h
 #define gamez_FallingObject_h
 
-#import <UIKit/UIView.h>
+#import <UIKit/UILabel.h>
 
-@interface FallingObject : UIView
-
-@property NSString *sprite;
-@property NSInteger speed;
+@interface FallingObject : UILabel
 
 - (void)hasReachedBottom;
 
 - (instancetype)initWithRandomSprite;
-- (instancetype)initWithSprite:(NSString *)character speed:(NSInteger)speed;
+- (instancetype)initWithSprite:(NSString *)character;
+
+- (void) create;
 
 @end
 

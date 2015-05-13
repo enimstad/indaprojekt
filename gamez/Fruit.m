@@ -23,11 +23,10 @@
 
 
 - (instancetype)initWithRandomSprite{
-    
-    return [super init];
+    return [self initWithSprite:@"🍎"];
 }
-- (instancetype)initWithSprite:(NSString *)character speed:(NSInteger)speed {
-    
+- (instancetype)initWithSprite:(NSString *)character {
+    self.text = character;
     return [super init];
 }
 
