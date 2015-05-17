@@ -10,15 +10,17 @@
 #define gamez_FallingObject_h
 
 #import <UIKit/UILabel.h>
+#import "Player.h"
 
 @interface FallingObject : UILabel
 
-- (void)hasReachedBottom;
+@property Player *player;
 
 - (instancetype)initWithRandomSprite;
 - (instancetype)initWithSprite:(NSString *)character;
 
-- (void) create;
+- (void)createWithPlayer:(Player *)player;
+- (void) catched;
 
 @end
 

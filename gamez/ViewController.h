@@ -18,9 +18,10 @@
 }
 
 @property IBOutlet UIButton *startButton;
+@property IBOutlet UILabel *scoreLabel;
+@property IBOutlet UILabel *livesLabel;
 @property NSArray *fallingObjects;
 @property Player *player;
-@property PlayerStat *playerState;
 
 @end
 

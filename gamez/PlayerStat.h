@@ -11,8 +11,11 @@
 
 @interface PlayerStat : NSObject
 
-@property (readonly) NSInteger score;
-@property (readonly) NSInteger lives;
+@property NSInteger score;
+@property NSInteger lives;
+
+- (void)increaseScore:(NSInteger)amount;
+- (void)decreaseLives:(NSInteger)amount;
 
 @end
 

@@ -10,6 +10,7 @@
 #define gamez_Player_h
 
 #import <UIKit/UIKit.h>
+#import "PlayerStat.h"
 
 typedef enum PlayerMove {
     PlayerMoveLeft,
@@ -18,12 +19,19 @@ typedef enum PlayerMove {
 
 @interface Player : UILabel
 
+@property NSTimer *timer;
+@property PlayerStat *stat;
+@property PlayerMove direction;
+
 // - (instancetype)initWithDefaultSprite;
 - (void)createWithEmoji:(NSString *)character;
 - (void)setEmoji:(NSString *)character;
 
-- (void)moveDirection:(PlayerMove)direction;
+- (void)move:(PlayerMove)direction;
 - (void)stopMoving;
+
+- (void)catchFruit;
+- (void)catchSweet;
 
 @end
 

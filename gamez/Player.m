@@ -8,12 +8,16 @@
 
 #import "Player.h"
 
-@implementation Player {
-    NSTimer *timer;
-    PlayerMove direction;
-}
+@interface Player ()
+
+- (void) actualMove;
+
+@end
+
+@implementation Player
 
 - (void)createWithEmoji:(NSString *)character {
+    self.stat = [[PlayerStat alloc] init];
     
     self.textAlignment = NSTextAlignmentCenter;
     self.font = [self.font fontWithSize:56];
@@ -27,19 +31,19 @@
     self.text = character;
 }
 
-- (void) moveDirection:(PlayerMove)moveDirection {
-    direction = moveDirection;
+- (void)move:(PlayerMove)move {
+    self.direction = move;
     
-    timer = [NSTimer scheduledTimerWithTimeInterval:0.02
+    self.timer = [NSTimer scheduledTimerWithTimeInterval:0.02
                                              target:self
-                                           selector:@selector(move)
+                                           selector:@selector(actualMove)
                                            userInfo:nil
                                             repeats:YES];
 }
 
-- (void)move {
+- (void)actualMove {
     CGFloat dx = 0, minx = CGRectGetMinX(self.frame), maxx = CGRectGetMaxX(self.frame);
-    switch (direction) {
+    switch (self.direction) {
         case PlayerMoveLeft:
             if (minx >= 5) dx = -2;     // Only move left if where not at the left edge
             break;
@@ -55,8 +59,16 @@
     self.frame = CGRectOffset(self.frame, dx, 0);
 }
 - (void)stopMoving {
-    [timer invalidate];
+    [self.timer invalidate];
 }
 
+- (void)catchFruit {
+    NSLog(@"Catched fruit");
+    [self.stat increaseScore:5];
+}
+- (void)catchSweet {
+    NSLog(@"Catched sweet");
+    [self.stat decreaseLives:2];
+}
 
 @end

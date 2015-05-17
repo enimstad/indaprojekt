@@ -17,10 +17,9 @@
 
 @implementation Fruit
 
--(void)hasReachedBottom {
-    
+- (void)catched {
+    [self.player catchFruit];
 }
-
 
 - (instancetype)initWithRandomSprite{
     return [self initWithSprite:@"🍎"];
