@@ -20,7 +20,7 @@
 - (instancetype)initWithSprite:(NSString *)character;
 
 - (void)createWithPlayer:(Player *)player;
-- (void) catched;
+- (void)catched;
 
 @end
 

@@ -10,6 +10,7 @@
 
 @interface ViewController ()
 - (void) startGame;
+- (void) stopGame;
 @end
 
 @implementation ViewController
@@ -60,13 +61,16 @@ void hello(){
 - (void)startGame {
     [self.view addSubview:self.player.stat.scoreLabel];
     [self.view addSubview:self.player.stat.livesLabel];
-    objectsCreator = [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(createObject) userInfo:nil repeats:YES];
+    objectsCreator = [NSTimer scheduledTimerWithTimeInterval:0.7 target:self selector:@selector(createObject) userInfo:nil repeats:YES];
 }
 
 // Generate a falling object and add to self's view
 // The type of object is chosen randomly
 - (void)createObject {
-//    self.player.stat.scoreLabel.text = [NSString stringWithFormat:@"hello"];
+    if (self.player.stat.lives <= 0) {
+        [self stopGame];
+    }
+    
     FallingObject *fo;
     bool createFruit = arc4random()%2;
     if (createFruit) {
@@ -78,6 +82,12 @@ void hello(){
     [self.view addSubview:fo];
     [fo createWithPlayer:self.player];
     // NSLog(@"%d", createFruit);
+}
+
+// When out of lives, stop creating falling objects and
+// show meny of options (...?)
+- (void)stopGame {
+    [objectsCreator invalidate];
 }
 
 - (void)didReceiveMemoryWarning {
