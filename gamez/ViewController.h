@@ -17,10 +17,8 @@
     NSTimer *objectsCreator;
 }
 
-@property IBOutlet UIButton *startButton;
-@property IBOutlet UILabel *scoreLabel;
-@property IBOutlet UILabel *livesLabel;
-@property NSArray *fallingObjects;
+@property IBOutlet PlayerStat *statView;
+// @property IBOutlet UIButton *startButton;
 @property Player *player;
 
 @end

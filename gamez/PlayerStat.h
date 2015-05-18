@@ -9,10 +9,15 @@
 #ifndef gamez_PlayerStat_h
 #define gamez_PlayerStat_h
 
-@interface PlayerStat : NSObject
+#import <UIKit/UIKit.h>
+
+@interface PlayerStat : UIView
 
 @property NSInteger score;
 @property NSInteger lives;
+
+@property IBOutlet UILabel *scoreLabel;
+@property IBOutlet UILabel *livesLabel;
 
 - (void)increaseScore:(NSInteger)amount;
 - (void)decreaseLives:(NSInteger)amount;

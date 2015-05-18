@@ -7,7 +7,6 @@
 //
 
 #import <UIKit/UIView.h>
-#import "FallingProtocol.h"
 #import "FallingObject.h"
 #import "Fruit.h"
 

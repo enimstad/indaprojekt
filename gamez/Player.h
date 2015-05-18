@@ -23,7 +23,7 @@ typedef enum PlayerMove {
 @property PlayerStat *stat;
 @property PlayerMove direction;
 
-// - (instancetype)initWithDefaultSprite;
+- (instancetype)initWithPlayerstat:(PlayerStat *)stat;
 - (void)createWithEmoji:(NSString *)character;
 - (void)setEmoji:(NSString *)character;
 

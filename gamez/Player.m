@@ -16,8 +16,12 @@
 
 @implementation Player
 
+- (instancetype)initWithPlayerstat:(PlayerStat *)stat {
+    self.stat = stat;
+    return [super init];
+}
+
 - (void)createWithEmoji:(NSString *)character {
-    self.stat = [[PlayerStat alloc] init];
     
     self.textAlignment = NSTextAlignmentCenter;
     self.font = [self.font fontWithSize:56];

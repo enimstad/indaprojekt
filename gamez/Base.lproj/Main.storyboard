@@ -25,55 +25,73 @@
                                     <segue destination="hcC-xe-O0F" kind="embed" id="s2J-pW-BCq"/>
                                 </connections>
                             </containerView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="btl-aj-iAt" customClass="Player">
+                            <view autoresizesSubviews="NO" opaque="NO" clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="56" placeholderIntrinsicHeight="50" translatesAutoresizingMaskIntoConstraints="NO" id="btl-aj-iAt" customClass="Player">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <gestureRecognizers/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="132" y="471" width="56" height="50"/>
+                                    <rect key="frame" x="132" y="470" width="56" height="50"/>
                                 </variation>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score: 0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IJh-rS-vQs">
-                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="40" y="28" width="97" height="21"/>
+                            <view clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bOC-Cs-dtq" customClass="PlayerStat">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <subviews>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lives: 10" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KtL-In-je8">
+                                        <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                        <variation key="widthClass=compact" fixedFrame="YES">
+                                            <rect key="frame" x="196" y="11" width="84" height="21"/>
+                                        </variation>
+                                    </label>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score: 0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IJh-rS-vQs">
+                                        <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                        <variation key="widthClass=compact" fixedFrame="YES">
+                                            <rect key="frame" x="8" y="11" width="97" height="21"/>
+                                        </variation>
+                                    </label>
+                                </subviews>
+                                <variation key="default">
+                                    <mask key="subviews">
+                                        <exclude reference="KtL-In-je8"/>
+                                        <exclude reference="IJh-rS-vQs"/>
+                                    </mask>
                                 </variation>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lives: 10" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KtL-In-je8">
-                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="196" y="28" width="84" height="21"/>
+                                    <rect key="frame" x="16" y="28" width="288" height="43"/>
+                                    <mask key="subviews">
+                                        <include reference="KtL-In-je8"/>
+                                        <include reference="IJh-rS-vQs"/>
+                                    </mask>
                                 </variation>
-                            </label>
+                                <connections>
+                                    <outlet property="livesLabel" destination="KtL-In-je8" id="7iz-k6-RL1"/>
+                                    <outlet property="scoreLabel" destination="IJh-rS-vQs" id="Jv1-w5-rBV"/>
+                                </connections>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="0.64346912304801962" green="0.80748895202020199" blue="0.65442711006862642" alpha="1" colorSpace="calibratedRGB"/>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="6zg-wu-ahd"/>
                                 <exclude reference="btl-aj-iAt"/>
-                                <exclude reference="IJh-rS-vQs"/>
-                                <exclude reference="KtL-In-je8"/>
+                                <exclude reference="bOC-Cs-dtq"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
                                 <include reference="6zg-wu-ahd"/>
                                 <include reference="btl-aj-iAt"/>
-                                <include reference="IJh-rS-vQs"/>
-                                <include reference="KtL-In-je8"/>
+                                <include reference="bOC-Cs-dtq"/>
                             </mask>
                         </variation>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
-                        <outlet property="livesLabel" destination="KtL-In-je8" id="tXP-22-K5u"/>
-                        <outlet property="scoreLabel" destination="IJh-rS-vQs" id="6XI-wy-DbG"/>
-                        <outlet property="startButton" destination="E6F-k5-wMr" id="SmJ-mk-KKU"/>
+                        <outlet property="statView" destination="bOC-Cs-dtq" id="MDm-jj-Fo2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>

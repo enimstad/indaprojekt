@@ -46,7 +46,6 @@
 		9CCFA4001AF2A24C005187F1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9CCFA4011AF2A24C005187F1 /* gamezTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = gamezTests.m; sourceTree = "<group>"; };
 		9CEC61D51B011B8400C328BB /* FallingObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FallingObject.h; sourceTree = "<group>"; };
-		9CEC61D81B011E4B00C328BB /* FallingProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FallingProtocol.h; sourceTree = "<group>"; };
 		9CEC61D91B011FD400C328BB /* Fruit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Fruit.m; sourceTree = "<group>"; };
 		9CEC61DB1B01203600C328BB /* Sweet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Sweet.m; sourceTree = "<group>"; };
 		9CEC61DD1B0128D200C328BB /* Player.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Player.h; sourceTree = "<group>"; };
@@ -111,7 +110,6 @@
 				9CEC61DE1B0128DA00C328BB /* Player.m */,
 				9CEC61E01B012B0B00C328BB /* PlayerStat.h */,
 				9CEC61E11B012B1300C328BB /* PlayerStat.m */,
-				9CEC61D81B011E4B00C328BB /* FallingProtocol.h */,
 				9CCFA3EF1AF2A24C005187F1 /* Main.storyboard */,
 				9CCFA3F21AF2A24C005187F1 /* Images.xcassets */,
 				9CCFA3F41AF2A24C005187F1 /* LaunchScreen.xib */,

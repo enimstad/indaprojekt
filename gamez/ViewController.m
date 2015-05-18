@@ -26,9 +26,13 @@ void hello(){
     
     [super viewDidLoad];
     
-    self.player = [[Player alloc] init];
+    self.player = [[Player alloc] initWithPlayerstat:self.statView];
     [self.view addSubview:self.player];
     [self.player createWithEmoji:@"🐵"];
+    
+//    [self.view addSubview:self.player.stat.scoreLabel];
+//    [self.view addSubview:self.player.stat.livesLabel];
+//    [self.player.stat createLabels];
 
     [self startGame];
     
@@ -54,14 +58,15 @@ void hello(){
 
 // Start a new game
 - (void)startGame {
+    [self.view addSubview:self.player.stat.scoreLabel];
+    [self.view addSubview:self.player.stat.livesLabel];
     objectsCreator = [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(createObject) userInfo:nil repeats:YES];
 }
 
 // Generate a falling object and add to self's view
 // The type of object is chosen randomly
 - (void)createObject {
-    self.scoreLabel.text = [NSString stringWithFormat:@"Score: %ld", (long)self.player.stat.score];
-    self.livesLabel.text = [NSString stringWithFormat:@"Lives: %ld", (long)self.player.stat.lives];
+//    self.player.stat.scoreLabel.text = [NSString stringWithFormat:@"hello"];
     FallingObject *fo;
     bool createFruit = arc4random()%2;
     if (createFruit) {
@@ -73,7 +78,6 @@ void hello(){
     [self.view addSubview:fo];
     [fo createWithPlayer:self.player];
     // NSLog(@"%d", createFruit);
-    // self.fallingObjects = [self.fallingObjects arrayByAddingObject:fo];
 }
 
 - (void)didReceiveMemoryWarning {
