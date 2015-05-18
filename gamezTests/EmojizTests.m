@@ -1,6 +1,6 @@
 //
-//  gamezTests.m
-//  gamezTests
+//  EmojizTests.m
+//  EmojizTests
 //
 //  Created by Emma Nimstad on 30/4/15.
 //  Copyright (c) 2015 Emma Nimstad. All rights reserved.
@@ -9,11 +9,11 @@
 #import <UIKit/UIKit.h>
 #import <XCTest/XCTest.h>
 
-@interface gamezTests : XCTestCase
+@interface EmojizTests : XCTestCase
 
 @end
 
-@implementation gamezTests
+@implementation EmojizTests
 
 - (void)setUp {
     [super setUp];

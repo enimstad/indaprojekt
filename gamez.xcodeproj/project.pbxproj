@@ -13,7 +13,7 @@
 		9CCFA3F11AF2A24C005187F1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9CCFA3EF1AF2A24C005187F1 /* Main.storyboard */; };
 		9CCFA3F31AF2A24C005187F1 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9CCFA3F21AF2A24C005187F1 /* Images.xcassets */; };
 		9CCFA3F61AF2A24C005187F1 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9CCFA3F41AF2A24C005187F1 /* LaunchScreen.xib */; };
-		9CCFA4021AF2A24C005187F1 /* gamezTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CCFA4011AF2A24C005187F1 /* gamezTests.m */; };
+		9CCFA4021AF2A24C005187F1 /* EmojizTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CCFA4011AF2A24C005187F1 /* EmojizTests.m */; };
 		9CEC61DA1B011FD400C328BB /* Fruit.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CEC61D91B011FD400C328BB /* Fruit.m */; };
 		9CEC61DC1B01203600C328BB /* Sweet.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CEC61DB1B01203600C328BB /* Sweet.m */; };
 		9CEC61DF1B0128DA00C328BB /* Player.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CEC61DE1B0128DA00C328BB /* Player.m */; };
@@ -44,7 +44,7 @@
 		9CCFA3F51AF2A24C005187F1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		9CCFA3FB1AF2A24C005187F1 /* gamezTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = gamezTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9CCFA4001AF2A24C005187F1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		9CCFA4011AF2A24C005187F1 /* gamezTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = gamezTests.m; sourceTree = "<group>"; };
+		9CCFA4011AF2A24C005187F1 /* EmojizTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EmojizTests.m; sourceTree = "<group>"; };
 		9CEC61D51B011B8400C328BB /* FallingObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FallingObject.h; sourceTree = "<group>"; };
 		9CEC61D91B011FD400C328BB /* Fruit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Fruit.m; sourceTree = "<group>"; };
 		9CEC61DB1B01203600C328BB /* Sweet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Sweet.m; sourceTree = "<group>"; };
@@ -78,8 +78,8 @@
 		9CCFA3D91AF2A24C005187F1 = {
 			isa = PBXGroup;
 			children = (
-				9CCFA3E41AF2A24C005187F1 /* gamez */,
-				9CCFA3FE1AF2A24C005187F1 /* gamezTests */,
+				9CCFA3E41AF2A24C005187F1 /* Emojiz */,
+				9CCFA3FE1AF2A24C005187F1 /* EmojizTests */,
 				9CCFA3E31AF2A24C005187F1 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -93,7 +93,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		9CCFA3E41AF2A24C005187F1 /* gamez */ = {
+		9CCFA3E41AF2A24C005187F1 /* Emojiz */ = {
 			isa = PBXGroup;
 			children = (
 				9CCFA3E91AF2A24C005187F1 /* AppDelegate.h */,
@@ -115,6 +115,7 @@
 				9CCFA3F41AF2A24C005187F1 /* LaunchScreen.xib */,
 				9CCFA3E51AF2A24C005187F1 /* Supporting Files */,
 			);
+			name = Emojiz;
 			path = gamez;
 			sourceTree = "<group>";
 		};
@@ -127,12 +128,13 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		9CCFA3FE1AF2A24C005187F1 /* gamezTests */ = {
+		9CCFA3FE1AF2A24C005187F1 /* EmojizTests */ = {
 			isa = PBXGroup;
 			children = (
-				9CCFA4011AF2A24C005187F1 /* gamezTests.m */,
+				9CCFA4011AF2A24C005187F1 /* EmojizTests.m */,
 				9CCFA3FF1AF2A24C005187F1 /* Supporting Files */,
 			);
+			name = EmojizTests;
 			path = gamezTests;
 			sourceTree = "<group>";
 		};
@@ -259,7 +261,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9CCFA4021AF2A24C005187F1 /* gamezTests.m in Sources */,
+				9CCFA4021AF2A24C005187F1 /* EmojizTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

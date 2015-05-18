@@ -1,13 +1,13 @@
 //
 //  PlayerStat.h
-//  gamez
+//  Emojiz
 //
 //  Created by Emma Nimstad on 11/5/15.
 //  Copyright (c) 2015 Emma Nimstad. All rights reserved.
 //
 
-#ifndef gamez_PlayerStat_h
-#define gamez_PlayerStat_h
+#ifndef Emojiz_PlayerStat_h
+#define Emojiz_PlayerStat_h
 
 #import <UIKit/UIKit.h>
 
