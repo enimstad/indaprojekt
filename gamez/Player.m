@@ -59,7 +59,6 @@
         [self stopMoving];
         return;
     }
-//    NSLog(@"Moves");
     self.frame = CGRectOffset(self.frame, dx, 0);
 }
 - (void)stopMoving {
@@ -67,11 +66,9 @@
 }
 
 - (void)catchFruit {
-    NSLog(@"Catched fruit");
     [self.stat increaseScore:5];
 }
 - (void)catchSweet {
-    NSLog(@"Catched sweet");
     [self.stat decreaseLives:2];
 }
 

@@ -9,18 +9,16 @@
 #import "ViewController.h"
 
 @interface ViewController ()
-- (void) startGame;
 - (void) stopGame;
 @end
 
 @implementation ViewController
 
 void hello(){
-    printf("Hello world\n");
+    printf("Hello world!\n");
 }
 
-// Set up the game
-// *and show main meny                                            <--
+// Set up the game and show main meny
 - (void)viewDidLoad {
     
     hello();
@@ -30,15 +28,6 @@ void hello(){
     self.player = [[Player alloc] initWithPlayerstat:self.statView];
     [self.view addSubview:self.player];
     [self.player createWithEmoji:@"🐵"];
-    
-//    [self.view addSubview:self.player.stat.scoreLabel];
-//    [self.view addSubview:self.player.stat.livesLabel];
-//    [self.player.stat createLabels];
-
-//    [self startGame];
-    
-//    [self.menyView.view setHidden:NO];
-//    [self presentSpecialViewController:self];
 }
 
 // Start movement of player emoji when screen is touched
@@ -59,13 +48,8 @@ void hello(){
 }
 
 // Start a new game
-- (void)startGame {
-    [self.view addSubview:self.player.stat.scoreLabel];
-    [self.view addSubview:self.player.stat.livesLabel];
-    
-}
-
 - (IBAction)startGame:(id)sender {
+//    self.statView.userInteractionEnabled = YES;  // ONLY FOR DEVELOPMENT PURPOSES
     [self.player.stat startGame];
     self.menyView.hidden = YES;
     self.menyView.userInteractionEnabled = NO;
@@ -75,6 +59,7 @@ void hello(){
 // Generate a falling object and add to self's view
 // The type of object is chosen randomly
 - (void)createObject {
+    
     if (self.player.stat.lives <= 0) {
         [self stopGame];
     }
@@ -87,18 +72,34 @@ void hello(){
     else {
         fo = [[Sweet alloc] initWithRandomSprite];
     }
+    if (!objectsCreator.valid) {
+        return;
+    }
     [self.view addSubview:fo];
     [fo createWithPlayer:self.player];
-    // NSLog(@"%d", createFruit);
 }
 
 // When out of lives, stop creating falling objects and
-// show meny of options (...?)
+// show startmeny
 - (void)stopGame {
     [objectsCreator invalidate];
+    
+    for (UIView *object in [self.view subviews]) {
+        if ([object isKindOfClass:[FallingObject class]]) {
+            [object setHidden:YES];
+        }
+    }
+    
     self.menyView.hidden = NO;
     self.menyView.userInteractionEnabled = YES;
 }
+
+
+// ONLY FOR DEVELOPMENT PURPOSES
+- (IBAction)endGame:(id)sender {
+    [self.player stopMoving];
+//    self.statView.userInteractionEnabled = NO;
+    [self stopGame];}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

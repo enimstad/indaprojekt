@@ -23,17 +23,21 @@
                                     <rect key="frame" x="132" y="470" width="56" height="50"/>
                                 </variation>
                             </view>
-                            <view clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bOC-Cs-dtq" customClass="PlayerStat">
+                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bOC-Cs-dtq" customClass="PlayerStat">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <subviews>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lives: 10" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KtL-In-je8">
+                                    <label opaque="NO" clipsSubviews="YES" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lives: 10" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KtL-In-je8">
                                         <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                        <gestureRecognizers/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                         <variation key="widthClass=compact" fixedFrame="YES">
                                             <rect key="frame" x="196" y="11" width="84" height="21"/>
                                         </variation>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="GQn-U8-0WQ" appends="YES" id="p5w-Wf-5AV"/>
+                                        </connections>
                                     </label>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score: 0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IJh-rS-vQs">
                                         <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
@@ -90,6 +94,9 @@
                                         <variation key="widthClass=compact" fixedFrame="YES">
                                             <rect key="frame" x="45" y="96" width="131" height="76"/>
                                         </variation>
+                                        <connections>
+                                            <segue destination="DNy-xF-Ifo" kind="presentation" id="XMD-hl-hle"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <variation key="default">
@@ -134,7 +141,65 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="GQn-U8-0WQ">
+                    <connections>
+                        <action selector="endGame:" destination="vXZ-lx-hvc" id="Pws-5p-Sh5"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
+        </scene>
+        <!--Collection View Controller-->
+        <scene sceneID="d57-hc-c98">
+            <objects>
+                <collectionViewController id="Lfj-2q-KCQ" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="exz-mY-6fJ">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="2on-0D-XPC">
+                            <size key="itemSize" width="50" height="50"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="YxT-8m-Hnb">
+                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="Lfj-2q-KCQ" id="Loa-H7-2wr"/>
+                            <outlet property="delegate" destination="Lfj-2q-KCQ" id="fAU-LC-NHp"/>
+                        </connections>
+                    </collectionView>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sz5-KJ-QxF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="672" y="864"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="0tG-vB-F71">
+            <objects>
+                <viewController modalTransitionStyle="crossDissolve" id="DNy-xF-Ifo" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="BPi-Jt-7ft"/>
+                        <viewControllerLayoutGuide type="bottom" id="uFE-L8-3Z8"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Ndr-ly-aMV">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <keyCommands/>
+                    <modalFormSheetSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ERE-QS-v2v" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="987" y="230"/>
         </scene>
     </scenes>
 </document>
