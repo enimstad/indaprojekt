@@ -35,8 +35,10 @@ void hello(){
 //    [self.view addSubview:self.player.stat.livesLabel];
 //    [self.player.stat createLabels];
 
-    [self startGame];
+//    [self startGame];
     
+//    [self.menyView.view setHidden:NO];
+//    [self presentSpecialViewController:self];
 }
 
 // Start movement of player emoji when screen is touched
@@ -49,7 +51,6 @@ void hello(){
             [self.player move:PlayerMoveRight];
         }
     }
-    
 }
 
 // Stop movement of player emoji when finger is released
@@ -61,6 +62,13 @@ void hello(){
 - (void)startGame {
     [self.view addSubview:self.player.stat.scoreLabel];
     [self.view addSubview:self.player.stat.livesLabel];
+    
+}
+
+- (IBAction)startGame:(id)sender {
+    [self.player.stat startGame];
+    self.menyView.hidden = YES;
+    self.menyView.userInteractionEnabled = NO;
     objectsCreator = [NSTimer scheduledTimerWithTimeInterval:0.7 target:self selector:@selector(createObject) userInfo:nil repeats:YES];
 }
 
@@ -88,6 +96,8 @@ void hello(){
 // show meny of options (...?)
 - (void)stopGame {
     [objectsCreator invalidate];
+    self.menyView.hidden = NO;
+    self.menyView.userInteractionEnabled = YES;
 }
 
 - (void)didReceiveMemoryWarning {
