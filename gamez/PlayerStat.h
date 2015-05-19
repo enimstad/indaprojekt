@@ -13,14 +13,15 @@
 
 @interface PlayerStat : UIView
 
-@property NSInteger score;
-@property NSInteger lives;
+@property (nonatomic) NSInteger score;
+@property (nonatomic) NSInteger lives;
 
 @property IBOutlet UILabel *scoreLabel;
 @property IBOutlet UILabel *livesLabel;
 
 - (void)increaseScore:(NSInteger)amount;
 - (void)decreaseLives:(NSInteger)amount;
+- (void)startGame;
 
 @end
 

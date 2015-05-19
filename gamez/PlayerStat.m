@@ -17,14 +17,27 @@
     return [super initWithCoder:aDecoder];
 }
 
-- (void)increaseScore:(NSInteger)amount {
-    self.score += amount;
-    NSLog(@"Score: %lu", (long)_score);
+- (void)updateLives:(NSInteger)lives {
+    self.lives = lives;
+    self.livesLabel.text = [NSString stringWithFormat:@"Lives: %ld", (long)self.lives];
+}
+
+- (void)updateScore:(NSInteger)score {
+    self.score = score;
     self.scoreLabel.text = [NSString stringWithFormat:@"Score: %ld", (long)self.score];
 }
+
+- (void)increaseScore:(NSInteger)amount {
+    [self updateScore:self.score+amount];
+}
+
 - (void)decreaseLives:(NSInteger)amount {
-    self.lives -= amount;
-    self.livesLabel.text = [NSString stringWithFormat:@"Lives: %ld", (long)self.lives];
+    [self updateLives:self.lives-amount];
+}
+
+- (void)startGame {
+    [self updateScore:0];
+    [self updateLives:10];
 }
 
 @end
