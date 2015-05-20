@@ -30,8 +30,8 @@ typedef enum PlayerMove {
 - (void)move:(PlayerMove)direction;
 - (void)stopMoving;
 
-- (void)catchFruit;
-- (void)catchSweet;
+- (void)catchFruitWithValue:(NSInteger)value;
+- (void)catchSweetWithValue:(NSInteger)value;
 
 @end
 

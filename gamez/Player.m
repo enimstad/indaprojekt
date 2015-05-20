@@ -65,11 +65,11 @@
     [self.timer invalidate];
 }
 
-- (void)catchFruit {
-    [self.stat increaseScore:5];
+- (void)catchFruitWithValue:(NSInteger)value {
+    [self.stat increaseScore:value];
 }
-- (void)catchSweet {
-    [self.stat decreaseLives:2];
+- (void)catchSweetWithValue:(NSInteger)value {
+    [self.stat decreaseLives:value];
 }
 
 @end

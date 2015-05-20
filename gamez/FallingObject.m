@@ -15,22 +15,21 @@
 
 @implementation FallingObject
 
+-(instancetype)init {
+    NSArray *object = [self anObject];
+    self.value = [[object objectAtIndex:0] integerValue];
+    self.text = [object objectAtIndex:1];
+    
+    return [super init];
+}
 
-- (instancetype)initWithRandomSprite{
-    
-    return [super init];
-}
-- (instancetype)initWithSprite:(NSString *)character {
-    
-    return [super init];
-}
 - (void)createWithPlayer:(Player *)player{
     self.player = player;
     
     self.textAlignment = NSTextAlignmentCenter;
     self.font = [self.font fontWithSize:46];
     
-    int xPos = 60+arc4random()%200;
+    int xPos = 30+arc4random()%260;
     
     self.center = CGPointMake(xPos, 100);
     self.bounds = CGRectMake(50, 50, 60, 60);

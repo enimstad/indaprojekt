@@ -15,12 +15,12 @@
 @interface FallingObject : UILabel
 
 @property Player *player;
-
-- (instancetype)initWithRandomSprite;
-- (instancetype)initWithSprite:(NSString *)character;
+@property NSInteger value;
 
 - (void)createWithPlayer:(Player *)player;
 - (void)catched;
+
+- (NSArray *)anObject;
 
 @end
 

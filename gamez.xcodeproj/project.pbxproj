@@ -99,6 +99,7 @@
 		9CCFA3E41AF2A24C005187F1 /* Emojiz */ = {
 			isa = PBXGroup;
 			children = (
+				9CFCD2861B0C8B31006B75F2 /* Emojichooser */,
 				9CCFA3E91AF2A24C005187F1 /* AppDelegate.h */,
 				9CCFA3EA1AF2A24C005187F1 /* AppDelegate.m */,
 				9CCFA3EC1AF2A24C005187F1 /* ViewController.h */,
@@ -149,6 +150,13 @@
 				9CCFA4001AF2A24C005187F1 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		9CFCD2861B0C8B31006B75F2 /* Emojichooser */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Emojichooser;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

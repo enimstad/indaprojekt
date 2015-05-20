@@ -49,11 +49,10 @@ void hello(){
 
 // Start a new game
 - (IBAction)startGame:(id)sender {
-//    self.statView.userInteractionEnabled = YES;  // ONLY FOR DEVELOPMENT PURPOSES
-    [self.player.stat startGame];
+    [self.player.stat reset];
     self.menyView.hidden = YES;
     self.menyView.userInteractionEnabled = NO;
-    objectsCreator = [NSTimer scheduledTimerWithTimeInterval:0.7 target:self selector:@selector(createObject) userInfo:nil repeats:YES];
+    objectsCreator = [NSTimer scheduledTimerWithTimeInterval:0.5 target:self selector:@selector(createObject) userInfo:nil repeats:YES];
 }
 
 // Generate a falling object and add to self's view
@@ -67,10 +66,10 @@ void hello(){
     FallingObject *fo;
     bool createFruit = arc4random()%2;
     if (createFruit) {
-        fo = [[Fruit alloc] initWithRandomSprite];
+        fo = [[Fruit alloc] init];
     }
     else {
-        fo = [[Sweet alloc] initWithRandomSprite];
+        fo = [[Sweet alloc] init];
     }
     if (!objectsCreator.valid) {
         return;
@@ -98,8 +97,8 @@ void hello(){
 // ONLY FOR DEVELOPMENT PURPOSES
 - (IBAction)endGame:(id)sender {
     [self.player stopMoving];
-//    self.statView.userInteractionEnabled = NO;
-    [self stopGame];}
+    [self stopGame];
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

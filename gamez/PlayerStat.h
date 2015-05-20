@@ -21,7 +21,7 @@
 
 - (void)increaseScore:(NSInteger)amount;
 - (void)decreaseLives:(NSInteger)amount;
-- (void)startGame;
+- (void)reset;
 
 @end
 

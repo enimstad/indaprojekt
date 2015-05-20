@@ -25,7 +25,5 @@
 - (IBAction)startGame:(id)sender;
 - (IBAction)endGame:(id)sender;
 
-- (IBAction)emojiChosen:(id)sender;
-
 @end
 

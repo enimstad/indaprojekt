@@ -10,22 +10,29 @@
 #import "FallingObject.h"
 #import "Fruit.h"
 
-@interface Fruit ()
-
-@end
+const NSArray *fruits;
+const NSArray *fruitvalues;
 
 @implementation Fruit
 
-- (void)catched {
-    [self.player catchFruit];
++ (void)initialize {
+    fruits = @[@"🍒", @"🍇", @"🍊", @"🍏", @"🍌", @"🍉"];
+    fruitvalues = @[@1, @3, @5, @7, @8, @10];
 }
 
-- (instancetype)initWithRandomSprite{
-    return [self initWithSprite:@"🍎"];
-}
-- (instancetype)initWithSprite:(NSString *)character {
-    self.text = character;
+- (instancetype)init{
+    NSLog(@"Initializing a fruit");
     return [super init];
+}
+
+- (NSArray *)anObject {
+    NSInteger rndm = arc4random()%[fruits count];
+    
+    return @[[fruitvalues objectAtIndex:rndm], [fruits objectAtIndex:rndm]];
+}
+
+- (void)catched {
+    [self.player catchFruitWithValue:self.value];
 }
 
 @end

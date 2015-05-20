@@ -12,12 +12,12 @@
 @implementation PlayerStat
 
 - (instancetype)initWithCoder:(NSCoder *)aDecoder {
-    self.score = 0;
-    self.lives = 10;
+    [self reset];
     return [super initWithCoder:aDecoder];
 }
 
 - (void)updateLives:(NSInteger)lives {
+    lives = MAX(lives, 0);
     self.lives = lives;
     self.livesLabel.text = [NSString stringWithFormat:@"Lives: %ld", (long)self.lives];
 }
@@ -35,7 +35,7 @@
     [self updateLives:self.lives-amount];
 }
 
-- (void)startGame {
+- (void)reset {
     [self updateScore:0];
     [self updateLives:10];
 }

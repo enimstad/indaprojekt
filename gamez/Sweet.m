@@ -10,22 +10,29 @@
 #import "FallingObject.h"
 #import "Sweet.h"
 
-@interface Sweet ()
-
-@end
+const NSArray *sweets;
+const NSArray *sweetvalues;
 
 @implementation Sweet
 
-- (void)catched {
-    [self.player catchSweet];
++ (void)initialize {
+    sweets = @[@"🎂", @"🍪", @"🍩", @"🍥"];
+    sweetvalues = @[@5, @3, @2, @1];
 }
 
-- (instancetype)initWithRandomSprite{
-    return [self initWithSprite:@"🍪"];
-}
-- (instancetype)initWithSprite:(NSString *)character {
-    self.text = character;
+- (instancetype)init{
+    NSLog(@"Initializing a sweet");
     return [super init];
+}
+
+- (NSArray *)anObject {
+    NSInteger rndm = arc4random()%[sweets count];
+    
+    return @[[sweetvalues objectAtIndex:rndm], [sweets objectAtIndex:rndm]];
+}
+
+- (void)catched {
+    [self.player catchSweetWithValue:self.value];
 }
 
 @end
