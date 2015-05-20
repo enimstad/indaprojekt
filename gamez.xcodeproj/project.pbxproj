@@ -19,7 +19,7 @@
 		9CEC61DC1B01203600C328BB /* Sweet.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CEC61DB1B01203600C328BB /* Sweet.m */; };
 		9CEC61DF1B0128DA00C328BB /* Player.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CEC61DE1B0128DA00C328BB /* Player.m */; };
 		9CEC61E21B012B1300C328BB /* PlayerStat.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CEC61E11B012B1300C328BB /* PlayerStat.m */; };
-		9CEC61EA1B08E1A500C328BB /* FallingObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CEC61E91B08E1A500C328BB /* FallingObject.m */; };
+		9CFCD2851B0C820C006B75F2 /* FallingObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CFCD2841B0C820C006B75F2 /* FallingObject.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,7 +57,7 @@
 		9CEC61E11B012B1300C328BB /* PlayerStat.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerStat.m; sourceTree = "<group>"; };
 		9CEC61E51B036C2900C328BB /* Fruit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Fruit.h; sourceTree = "<group>"; };
 		9CEC61E61B036C3100C328BB /* Sweet.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Sweet.h; sourceTree = "<group>"; };
-		9CEC61E91B08E1A500C328BB /* FallingObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FallingObject.m; path = ../../../../.Trash/FallingObject.m; sourceTree = "<group>"; };
+		9CFCD2841B0C820C006B75F2 /* FallingObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FallingObject.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,7 +106,7 @@
 				9C76CB771B0B38960043F2EB /* MenyView.h */,
 				9C76CB751B0B388E0043F2EB /* MenyView.m */,
 				9CEC61D51B011B8400C328BB /* FallingObject.h */,
-				9CEC61E91B08E1A500C328BB /* FallingObject.m */,
+				9CFCD2841B0C820C006B75F2 /* FallingObject.m */,
 				9CEC61E51B036C2900C328BB /* Fruit.h */,
 				9CEC61D91B011FD400C328BB /* Fruit.m */,
 				9CEC61E61B036C3100C328BB /* Sweet.h */,
@@ -258,7 +258,7 @@
 				9CCFA3EE1AF2A24C005187F1 /* ViewController.m in Sources */,
 				9CCFA3EB1AF2A24C005187F1 /* AppDelegate.m in Sources */,
 				9CEC61DF1B0128DA00C328BB /* Player.m in Sources */,
-				9CEC61EA1B08E1A500C328BB /* FallingObject.m in Sources */,
+				9CFCD2851B0C820C006B75F2 /* FallingObject.m in Sources */,
 				9CCFA3E81AF2A24C005187F1 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
