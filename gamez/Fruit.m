@@ -20,11 +20,6 @@ const NSArray *fruitvalues;
     fruitvalues = @[@1, @3, @5, @7, @8, @10];
 }
 
-- (instancetype)init{
-    NSLog(@"Initializing a fruit");
-    return [super init];
-}
-
 - (NSArray *)anObject {
     NSInteger rndm = arc4random()%[fruits count];
     

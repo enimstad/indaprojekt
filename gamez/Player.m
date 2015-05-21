@@ -35,6 +35,8 @@
     self.text = character;
 }
 
+// Make the player move in the given PlayerMove-direction.
+// Player stops moving when it hits left och right edge.
 - (void)move:(PlayerMove)move {
     self.direction = move;
     

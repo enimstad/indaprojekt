@@ -20,11 +20,6 @@ const NSArray *sweetvalues;
     sweetvalues = @[@5, @3, @2, @1];
 }
 
-- (instancetype)init{
-    NSLog(@"Initializing a sweet");
-    return [super init];
-}
-
 - (NSArray *)anObject {
     NSInteger rndm = arc4random()%[sweets count];
     

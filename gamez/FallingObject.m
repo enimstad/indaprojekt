@@ -47,6 +47,9 @@
 
 - (void)reachedBottom {
     [self removeFromSuperview];
+    if (self.hidden) {
+        return;
+    }
     
     if ([self distanceToPlayer] <= 46) {
         [self catched];
