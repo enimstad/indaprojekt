@@ -14,6 +14,7 @@
 
 @implementation ViewController
 
+// Demonstration av att C fungerar bra
 void hello(){
     printf("Hello world!\n");
 }
@@ -27,7 +28,7 @@ void hello(){
     
     self.player = [[Player alloc] initWithPlayerstat:self.statView];
     [self.view addSubview:self.player];
-    [self.player createWithEmoji:@"🐵"];
+    [self.player createWithEmoji:@"🐱"];
 }
 
 // Start movement of player emoji when screen is touched.
@@ -93,7 +94,6 @@ void hello(){
     self.menyView.hidden = NO;
     self.menyView.userInteractionEnabled = YES;
 }
-
 
 // ONLY FOR DEVELOPMENT PURPOSES
 - (IBAction)endGame:(id)sender {
