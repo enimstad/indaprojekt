@@ -87,6 +87,9 @@
                                         <variation key="widthClass=compact" fixedFrame="YES">
                                             <rect key="frame" x="45" y="98" width="131" height="76"/>
                                         </variation>
+                                        <connections>
+                                            <segue destination="ppL-8o-t9l" kind="presentation" id="e1G-1Q-bgA"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <variation key="default">
@@ -122,6 +125,7 @@
                             </mask>
                         </variation>
                     </view>
+                    <navigationItem key="navigationItem" id="pK8-4o-e7f"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
                         <outlet property="menyView" destination="mP4-s0-Xca" id="hrT-jW-kAM"/>
@@ -135,6 +139,68 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
+        </scene>
+        <!--Collection-->
+        <scene sceneID="ntW-w3-kvv">
+            <objects>
+                <collectionViewController id="ppL-8o-t9l" customClass="Collection" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="tsY-s8-Khc">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.64346912300000003" green="0.80748895200000004" blue="0.65442711009999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="IWW-Bp-jvq">
+                            <size key="itemSize" width="86" height="79"/>
+                            <size key="headerReferenceSize" width="50" height="50"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" contentMode="center" reuseIdentifier="cellID" id="4xw-ZH-6FR" customClass="Cell">
+                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="86" height="79"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="L" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="STT-3O-0fM">
+                                            <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="56"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                            <nil key="highlightedColor"/>
+                                            <variation key="widthClass=compact" fixedFrame="YES">
+                                                <rect key="frame" x="0.0" y="11" width="87" height="58"/>
+                                            </variation>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                                <variation key="default">
+                                    <mask key="subviews">
+                                        <exclude reference="STT-3O-0fM"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact">
+                                    <mask key="subviews">
+                                        <include reference="STT-3O-0fM"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <outlet property="label" destination="STT-3O-0fM" id="8Y9-LZ-5u4"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="xm9-fd-bOx">
+                            <autoresizingMask key="autoresizingMask"/>
+                        </collectionReusableView>
+                        <connections>
+                            <outlet property="dataSource" destination="ppL-8o-t9l" id="oFb-qQ-01A"/>
+                            <outlet property="delegate" destination="ppL-8o-t9l" id="DDe-bh-hbm"/>
+                        </connections>
+                    </collectionView>
+                    <modalPageSheetSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="McE-ij-Jhf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1330.5" y="937"/>
         </scene>
     </scenes>
 </document>

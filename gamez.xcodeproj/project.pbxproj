@@ -20,6 +20,8 @@
 		9CEC61DF1B0128DA00C328BB /* Player.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CEC61DE1B0128DA00C328BB /* Player.m */; };
 		9CEC61E21B012B1300C328BB /* PlayerStat.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CEC61E11B012B1300C328BB /* PlayerStat.m */; };
 		9CFCD2851B0C820C006B75F2 /* FallingObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CFCD2841B0C820C006B75F2 /* FallingObject.m */; };
+		9CFCD2911B0DD7DC006B75F2 /* Cell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CFCD2901B0DD7DC006B75F2 /* Cell.m */; };
+		9CFCD2961B0DD826006B75F2 /* Collection.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CFCD2951B0DD826006B75F2 /* Collection.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +60,10 @@
 		9CEC61E51B036C2900C328BB /* Fruit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Fruit.h; sourceTree = "<group>"; };
 		9CEC61E61B036C3100C328BB /* Sweet.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Sweet.h; sourceTree = "<group>"; };
 		9CFCD2841B0C820C006B75F2 /* FallingObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FallingObject.m; sourceTree = "<group>"; };
+		9CFCD2901B0DD7DC006B75F2 /* Cell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Cell.m; sourceTree = "<group>"; };
+		9CFCD2921B0DD7E2006B75F2 /* Cell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Cell.h; sourceTree = "<group>"; };
+		9CFCD2931B0DD7EA006B75F2 /* Collection.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Collection.h; sourceTree = "<group>"; };
+		9CFCD2951B0DD826006B75F2 /* Collection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Collection.m; path = ../Collection.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -155,6 +161,10 @@
 		9CFCD2861B0C8B31006B75F2 /* Emojichooser */ = {
 			isa = PBXGroup;
 			children = (
+				9CFCD2921B0DD7E2006B75F2 /* Cell.h */,
+				9CFCD2901B0DD7DC006B75F2 /* Cell.m */,
+				9CFCD2931B0DD7EA006B75F2 /* Collection.h */,
+				9CFCD2951B0DD826006B75F2 /* Collection.m */,
 			);
 			name = Emojichooser;
 			sourceTree = "<group>";
@@ -264,10 +274,12 @@
 				9CEC61DC1B01203600C328BB /* Sweet.m in Sources */,
 				9CEC61DA1B011FD400C328BB /* Fruit.m in Sources */,
 				9CCFA3EE1AF2A24C005187F1 /* ViewController.m in Sources */,
+				9CFCD2911B0DD7DC006B75F2 /* Cell.m in Sources */,
 				9CCFA3EB1AF2A24C005187F1 /* AppDelegate.m in Sources */,
 				9CEC61DF1B0128DA00C328BB /* Player.m in Sources */,
 				9CFCD2851B0C820C006B75F2 /* FallingObject.m in Sources */,
 				9CCFA3E81AF2A24C005187F1 /* main.m in Sources */,
+				9CFCD2961B0DD826006B75F2 /* Collection.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

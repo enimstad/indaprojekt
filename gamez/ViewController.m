@@ -101,6 +101,10 @@ void hello(){
     [self stopGame];
 }
 
+- (void)chooseEmoji:(NSString *)character {
+    [self.player setEmoji:character];
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

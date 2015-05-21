@@ -25,5 +25,7 @@
 - (IBAction)startGame:(id)sender;
 - (IBAction)endGame:(id)sender;
 
+- (void)chooseEmoji:(NSString *)character;
+
 @end
 
