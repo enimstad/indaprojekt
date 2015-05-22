@@ -16,8 +16,8 @@ const NSArray *sweetvalues;
 @implementation Sweet
 
 + (void)initialize {
-    sweets = @[@"🎂", @"🍪", @"🍩", @"🍥"];
-    sweetvalues = @[@5, @3, @2, @1];
+    sweets = @[@"🍪", @"🍩", @"🍰", @"🎂"];
+    sweetvalues = @[@1, @2, @3, @5];
 }
 
 - (NSArray *)anObject {

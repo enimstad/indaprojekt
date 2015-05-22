@@ -17,7 +17,7 @@ const NSArray *fruitvalues;
 
 + (void)initialize {
     fruits = @[@"🍒", @"🍇", @"🍊", @"🍏", @"🍌", @"🍉"];
-    fruitvalues = @[@1, @3, @5, @7, @8, @10];
+    fruitvalues = @[@2, @3, @5, @7, @8, @10];
 }
 
 - (NSArray *)anObject {

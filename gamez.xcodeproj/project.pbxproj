@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		9C76CB761B0B388E0043F2EB /* MenyView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C76CB751B0B388E0043F2EB /* MenyView.m */; };
 		9CCFA3E81AF2A24C005187F1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CCFA3E71AF2A24C005187F1 /* main.m */; };
 		9CCFA3EB1AF2A24C005187F1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CCFA3EA1AF2A24C005187F1 /* AppDelegate.m */; };
 		9CCFA3EE1AF2A24C005187F1 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CCFA3ED1AF2A24C005187F1 /* ViewController.m */; };
@@ -35,8 +34,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		9C76CB751B0B388E0043F2EB /* MenyView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenyView.m; sourceTree = "<group>"; };
-		9C76CB771B0B38960043F2EB /* MenyView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MenyView.h; sourceTree = "<group>"; };
 		9CCFA3E21AF2A24C005187F1 /* gamez.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = gamez.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9CCFA3E61AF2A24C005187F1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9CCFA3E71AF2A24C005187F1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -110,8 +107,6 @@
 				9CCFA3EA1AF2A24C005187F1 /* AppDelegate.m */,
 				9CCFA3EC1AF2A24C005187F1 /* ViewController.h */,
 				9CCFA3ED1AF2A24C005187F1 /* ViewController.m */,
-				9C76CB771B0B38960043F2EB /* MenyView.h */,
-				9C76CB751B0B388E0043F2EB /* MenyView.m */,
 				9CEC61D51B011B8400C328BB /* FallingObject.h */,
 				9CFCD2841B0C820C006B75F2 /* FallingObject.m */,
 				9CEC61E51B036C2900C328BB /* Fruit.h */,
@@ -270,7 +265,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				9CEC61E21B012B1300C328BB /* PlayerStat.m in Sources */,
-				9C76CB761B0B388E0043F2EB /* MenyView.m in Sources */,
 				9CEC61DC1B01203600C328BB /* Sweet.m in Sources */,
 				9CEC61DA1B011FD400C328BB /* Fruit.m in Sources */,
 				9CCFA3EE1AF2A24C005187F1 /* ViewController.m in Sources */,

@@ -1,7 +1,6 @@
 #import "Collection.h"
 #import "Cell.h"
 
-NSString *kDetailedViewControllerID = @"DetailView";    // view controller storyboard id
 NSString *kCellID = @"cellID";                          // UICollectionViewCell storyboard id
 NSString *emojiz = @"🐱🐯🐶🐵🐷🐮🐻🐼🐨🐙🐸🐞🐰🐹🐭";
 
@@ -11,7 +10,8 @@ NSString *emojiz = @"🐱🐯🐶🐵🐷🐮🐻🐼🐨🐙🐸🐞🐰🐹�
     return [emojiz length]/2;
 }
 
-- (UICollectionViewCell *)collectionView:(UICollectionView *)cv cellForItemAtIndexPath:(NSIndexPath *)indexPath {
+- (UICollectionViewCell *)collectionView:(UICollectionView *)cv
+                  cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     Cell *cell = [cv dequeueReusableCellWithReuseIdentifier:kCellID forIndexPath:indexPath];
     cell.label.text = [emojiz substringWithRange:NSMakeRange(2*indexPath.row, 2)];
     

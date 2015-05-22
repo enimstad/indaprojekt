@@ -7,7 +7,6 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "MenyView.h"
 #import "Player.h"
 #import "PlayerStat.h"
 #import "FallingObject.h"
@@ -19,7 +18,7 @@
 }
 
 @property IBOutlet PlayerStat *statView;
-@property IBOutlet MenyView *menyView;
+@property IBOutlet UIView *menyView;
 @property Player *player;
 
 - (IBAction)startGame:(id)sender;
